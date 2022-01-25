@@ -6,10 +6,10 @@ import in.as.sixtynine.rakku.userservice.entity.User;
 import in.as.sixtynine.rakku.userservice.service.dbservice.UserDataService;
 import in.as.sixtynine.rakku.userservice.utils.ERole;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
-@Slf4j
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class UserManagementService {

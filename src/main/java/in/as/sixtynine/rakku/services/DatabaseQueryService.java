@@ -10,7 +10,7 @@ import in.as.sixtynine.rakku.configs.DocumentDBConfig;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -19,7 +19,7 @@ import javax.annotation.PostConstruct;
  * @Author Sanjay Das (s0d062y), Created on 25/01/22
  */
 
-@Slf4j
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class DatabaseQueryService {

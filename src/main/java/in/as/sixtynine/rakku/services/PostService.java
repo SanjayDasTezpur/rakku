@@ -16,7 +16,7 @@ import in.as.sixtynine.rakku.userservice.service.UserManagementService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -31,7 +31,7 @@ import static in.as.sixtynine.rakku.constants.DBConstants.POSTS;
  */
 
 @Service
-@Slf4j
+@Log4j2
 @RequiredArgsConstructor
 public class PostService {
 

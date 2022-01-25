@@ -1,7 +1,7 @@
 package in.as.sixtynine.rakku;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 
-@Slf4j
+@Log4j2
 @EnableScheduling
 @SpringBootApplication
 @RequiredArgsConstructor

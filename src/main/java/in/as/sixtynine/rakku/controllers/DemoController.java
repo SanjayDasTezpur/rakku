@@ -3,7 +3,7 @@ package in.as.sixtynine.rakku.controllers;
 import in.as.sixtynine.rakku.dtos.PostDto;
 import in.as.sixtynine.rakku.services.PostService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,7 +13,7 @@ import java.security.Principal;
  * @Author Sanjay Das (s0d062y), Created on 23/01/22
  */
 
-@Slf4j
+@Log4j2
 @CrossOrigin
 @RequiredArgsConstructor
 @RestController

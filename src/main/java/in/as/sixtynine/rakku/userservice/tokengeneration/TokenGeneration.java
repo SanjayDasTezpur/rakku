@@ -8,13 +8,13 @@ import in.as.sixtynine.rakku.userservice.entity.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.Date;
 
-@Slf4j
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class TokenGeneration {

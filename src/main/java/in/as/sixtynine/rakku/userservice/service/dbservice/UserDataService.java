@@ -9,7 +9,7 @@ import in.as.sixtynine.rakku.services.MessageSenderService;
 import in.as.sixtynine.rakku.userservice.entity.User;
 import in.as.sixtynine.rakku.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,7 @@ import java.util.Optional;
 import java.util.Set;
 
 
-@Slf4j
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class UserDataService {

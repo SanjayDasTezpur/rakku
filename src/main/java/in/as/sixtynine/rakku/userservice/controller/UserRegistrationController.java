@@ -7,7 +7,7 @@ import in.as.sixtynine.rakku.userservice.tokengeneration.TokenGeneration;
 import in.as.sixtynine.rakku.userservice.utils.ELevel;
 import in.as.sixtynine.rakku.userservice.utils.UserType;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.http.HttpHeaders;
@@ -22,7 +22,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.Principal;
 
 
-@Slf4j
+@Log4j2
 @RestController
 @RequestMapping()
 @RequiredArgsConstructor
