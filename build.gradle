@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.3.3.RELEASE")
     }
 }
 
@@ -32,11 +32,30 @@ targetCompatibility = 1.8
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
-    compileOnly 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'com.azure:azure-spring-data-cosmos:3.4.0'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.9'
+    compileOnly 'org.projectlombok:lombok'
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    implementation 'com.eatthepath:java-otp:0.2.0'
+
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+/*
+
+task npmInstall(type: Exec) {
+    workingDir 'src/main/resources/static'
+    commandLine 'npm', 'install'
+}
+
+task uiRun(type: Exec) {
+    workingDir 'src/main/resources/static'
+    commandLine 'npm', 'start'
+}
+
+*/
