@@ -3,7 +3,8 @@ package in.as.sixtynine.rakku.services;
 import in.as.sixtynine.rakku.entities.OTP;
 import in.as.sixtynine.rakku.repositories.OTPRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +14,11 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-@Log4j2
+
 @RequiredArgsConstructor
 public class MessageSenderService {
+    private static final Logger log = LogManager.getLogger(MessageSenderService.class);
+
     private final OTPRepository otpRepository;
 
     @Value("${otp.ttl:300}")

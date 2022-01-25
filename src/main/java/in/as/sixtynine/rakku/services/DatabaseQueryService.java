@@ -10,7 +10,8 @@ import in.as.sixtynine.rakku.configs.DocumentDBConfig;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -19,10 +20,12 @@ import javax.annotation.PostConstruct;
  * @Author Sanjay Das (s0d062y), Created on 25/01/22
  */
 
-@Log4j2
+
 @Service
 @RequiredArgsConstructor
 public class DatabaseQueryService {
+
+    private static final Logger log = LogManager.getLogger(DatabaseQueryService.class);
 
     private final CosmosClientBuilder cosmosClientBuilder;
     private final DocumentDBConfig documentDBConfig;

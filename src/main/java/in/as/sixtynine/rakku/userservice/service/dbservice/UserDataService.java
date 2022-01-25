@@ -9,9 +9,10 @@ import in.as.sixtynine.rakku.services.MessageSenderService;
 import in.as.sixtynine.rakku.userservice.entity.User;
 import in.as.sixtynine.rakku.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -26,10 +27,11 @@ import java.util.Optional;
 import java.util.Set;
 
 
-@Log4j2
 @Service
 @RequiredArgsConstructor
 public class UserDataService {
+    private static final Logger log = LogManager.getLogger(UserDataService.class);
+
     private final AppConf conf;
     private final UserRepository userRepository;
     private final OTPRepository otpRepository;

@@ -6,10 +6,9 @@ import in.as.sixtynine.rakku.userservice.entity.User;
 import in.as.sixtynine.rakku.userservice.service.dbservice.UserDataService;
 import in.as.sixtynine.rakku.userservice.utils.ERole;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
-@Log4j2
+
 @Service
 @RequiredArgsConstructor
 public class UserManagementService {
@@ -32,7 +31,7 @@ public class UserManagementService {
     }
 
     public User getUserByID(String id) {
-       return userDataService.getUserByID(id);
+        return userDataService.getUserByID(id);
     }
 
     public User getUserByMobileNumber(String mobilenumber) {

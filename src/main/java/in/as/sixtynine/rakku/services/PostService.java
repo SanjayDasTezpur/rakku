@@ -1,37 +1,25 @@
 package in.as.sixtynine.rakku.services;
 
-import com.azure.cosmos.CosmosClient;
-import com.azure.cosmos.CosmosClientBuilder;
-import com.azure.cosmos.CosmosContainer;
-import com.azure.cosmos.CosmosDatabase;
 import com.azure.cosmos.models.CosmosQueryRequestOptions;
 import com.azure.cosmos.util.CosmosPagedIterable;
-import in.as.sixtynine.rakku.configs.DocumentDBConfig;
 import in.as.sixtynine.rakku.dtos.PostDto;
 import in.as.sixtynine.rakku.entities.Post;
 import in.as.sixtynine.rakku.mappers.PostMapper;
 import in.as.sixtynine.rakku.repositories.PostsRepository;
 import in.as.sixtynine.rakku.userservice.entity.User;
 import in.as.sixtynine.rakku.userservice.service.UserManagementService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
-import static in.as.sixtynine.rakku.constants.DBConstants.POSTS;
 
 /**
  * @Author Sanjay Das (s0d062y), Created on 23/01/22
  */
 
 @Service
-@Log4j2
 @RequiredArgsConstructor
 public class PostService {
 
