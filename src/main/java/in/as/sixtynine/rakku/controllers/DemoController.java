@@ -25,7 +25,7 @@ public class DemoController {
 
     @GetMapping("/users")
     public Object fetchUsers() {
-        log.info("fetching users....");
+     //   log.info("fetching users....");
         return restTemplate.getForObject("https://jsonplaceholder.typicode.com/users", Object.class);
     }
 
@@ -33,7 +33,7 @@ public class DemoController {
     public Object getPosts(@RequestParam(value = "page", defaultValue = "0") Integer page,
                            @RequestParam(value = "size", defaultValue = "10") Integer size,
                            Principal principal) {
-        log.info("fetching post...., page={}, size={}", page, size);
+       // log.info("fetching post...., page={}, size={}", page, size);
         return postService.getScrollingPost(page, size, principal.getName());
     }
 
@@ -41,7 +41,7 @@ public class DemoController {
     public Object getRelevantPosts(@RequestParam(value = "page", defaultValue = "0") Integer page,
                            @RequestParam(value = "size", defaultValue = "10") Integer size,
                            Principal principal) {
-        log.info("fetching post...., page={}, size={}", page, size);
+       // log.info("fetching post...., page={}, size={}", page, size);
         return postService.getRelevantPost(page, size, principal.getName());
     }
 

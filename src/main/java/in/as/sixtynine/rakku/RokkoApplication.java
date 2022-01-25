@@ -38,7 +38,7 @@ public class RokkoApplication {
 		}
 	}
 	public static void main(String[] args) {
-		log.info("Starting app now....");
+		//log.info("Starting app now....");
 		SpringApplication.run(RokkoApplication.class, args);
 	}
 
