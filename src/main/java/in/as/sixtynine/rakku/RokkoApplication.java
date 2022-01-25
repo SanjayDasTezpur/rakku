@@ -1,5 +1,6 @@
 package in.as.sixtynine.rakku;
 
+import com.azure.spring.data.cosmos.repository.config.EnableCosmosRepositories;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,7 @@ import java.util.Collection;
 @EnableScheduling
 @SpringBootApplication
 @RequiredArgsConstructor
+@EnableCosmosRepositories
 public class RokkoApplication {
 
 	private final Environment env;
